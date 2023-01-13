@@ -1,32 +1,38 @@
-import { useState } from "react"
-import Data from './db/Data.json'
+import { useState, useEffect } from "react";
+import axios from 'axios';
+import Data from './db/Data.json';
 
 
-function Slider(props){
-    const[image, setImage] = useState('')
-    const[name, setName] = useState('')
+function Slider(){
+    const [character, setCharacter] = useState({})
     const[pageNumber, setPageNumber] = useState(1)
 
-    const pageUp = () => setPageNumber(pageNumber+1)
-    const pageDown = () => setPageNumber(pageNumber-1)
+    const pageUp = () => setPageNumber(prev => prev + 1)
+    const pageDown = () => setPageNumber(prev => prev - 1)
     const theImage = `https://rickandmortyapi.com/api/character/avatar/${pageNumber}.jpeg`
 
-    // const limiter = () =>{
-    //     if(pageNumber <= 0){
-
-    //     }
-    // }
+    const fetchCharacter = async () => {
+        const response = await axios(`https://rickandmortyapi.com/api/character/${pageNumber}`);
+        setCharacter(response.data)
+    }
+    
+    useEffect(()=>{
+        fetchCharacter()
+    }, [pageNumber])
 
 return (
-    <div class ='infoWindow'>{pageNumber}
-        <div class ='next' onClick={pageUp}>next</div>
-        <div class = 'display'>R&M Characters
-            <div class ='image'>
-                <img class ='image' src={theImage} alt='Character Picture'></img>
+    <div className ='infoWindow'>{pageNumber}
+        <div className ='next' onClick={pageUp}>next</div>
+        <div className = 'display'>
+            <div className ='imageDiv'>
+                <img className ='image' src={theImage} alt='Character Image'></img>
             </div>
-            <div class = 'name'></div>
+            <div className='textArea'>
+                <h1 className="name">{character.name}</h1>
+                <p className="status">{character.status}</p>
+            </div>
         </div>
-    <div class ='prev' onClick={pageDown}>prev</div>
+    <div className ='prev' onClick={pageDown}>prev</div>
   </div>)
 } 
 export default Slider
