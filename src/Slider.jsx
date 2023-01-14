@@ -22,9 +22,9 @@ function Slider(){
     
     function limiter(){
         if(pageNumber<1){
-            setPageNumber(prev => prev = 1)
-        } else if(pageNumber > 826){
             setPageNumber(prev => prev = 826)
+        } else if(pageNumber > 826){
+            setPageNumber(prev => prev = 1)
         }
     }
 
@@ -37,9 +37,9 @@ return (
     <div className ='infoWindow'>  
         
         <div className="forwardButtons">
-            <button disabled={pageNumber >= 826} className ='next' onClick={pageUp}>▶︎</button>
-            <button disabled={pageNumber >= 826} className ='fiftyUp' onClick={fiftyUp}>▷▶</button>
-            <button disabled={pageNumber >= 826} className ='end' onClick={end}>⇥</button>
+            <button  className ='next' onClick={pageUp}>▶︎</button>
+            <button  className ='fiftyUp' onClick={fiftyUp}>▷▶</button>
+            <button  className ='end' onClick={end}>⇥</button>
         </div>
 
         <div className = 'display'>
@@ -51,15 +51,15 @@ return (
             <div className='textArea'>
                 <h3 className="name">Name: {character.name}</h3>
                 <h3 className="status">Status: {character.status}</h3>
-                <p className="outOf">{pageNumber} of 826</p>
+                <h4 className="outOf">Character: {pageNumber} of 826</h4>
             </div>
 
         </div>
 
     <div className='backButtons'>
-        <button disabled={pageNumber <= 1} className ='prev' onClick={pageDown}>◀︎</button>
-        <button disabled={pageNumber <= 1} className ='fiftyDown' onClick={fiftyDown}>◀︎◁</button>
-        <button disabled={pageNumber <= 1} className ='start' onClick={begining}>⇤</button>
+        <button className ='prev' onClick={pageDown}>◀︎</button>
+        <button className ='fiftyDown' onClick={fiftyDown}>◀︎◁</button>
+        <button className ='start' onClick={begining}>⇤</button>
     </div>
 
   </div> 
