@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from 'axios';
-import Data from './db/Data.json';
+
 
 
 function Slider(){
@@ -21,15 +21,15 @@ function Slider(){
     }, [pageNumber])
 
 return (
-    <div className ='infoWindow'>{pageNumber}  
+    <div className ='infoWindow'>  
         <div className ='next' onClick={pageUp}>▶︎</div>
         <div className = 'display'>
             <div className ='imageDiv'>
                 <img className ='image' src={theImage} alt='Character Image'></img>
             </div>
             <div className='textArea'>
-                <h1 className="name">Name: {character.name}</h1>
-                <p className="status">Status: {character.status}</p>
+                <h3 className="name">Name: {character.name}</h3>
+                <h3 className="status">Status: {character.status}</h3>
             </div>
         </div>
     <div className ='prev' onClick={pageDown}>◀︎</div>
