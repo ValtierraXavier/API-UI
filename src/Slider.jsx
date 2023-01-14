@@ -22,7 +22,7 @@ function Slider(){
 
 return (
     <div className ='infoWindow'>  
-        <div className ='next' onClick={pageUp}>▶︎</div>
+        <button disabled={pageNumber >= 826} className ='next' onClick={pageUp}>▶︎</button>
         <div className = 'display'>
             <div className ='imageDiv'>
                 <img className ='image' src={theImage} alt='Character Image'></img>
@@ -32,7 +32,7 @@ return (
                 <h3 className="status">Status: {character.status}</h3>
             </div>
         </div>
-    <div className ='prev' onClick={pageDown}>◀︎</div>
+    <button disabled={pageNumber <= 1} className ='prev' onClick={pageDown}>◀︎</button>
   </div>)
 } 
 export default Slider
