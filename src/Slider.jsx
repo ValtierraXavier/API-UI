@@ -21,18 +21,18 @@ function Slider(){
     }, [pageNumber])
 
 return (
-    <div className ='infoWindow'>{pageNumber}
-        <div className ='next' onClick={pageUp}>next</div>
+    <div className ='infoWindow'>{pageNumber}  
+        <div className ='next' onClick={pageUp}>▶︎</div>
         <div className = 'display'>
             <div className ='imageDiv'>
                 <img className ='image' src={theImage} alt='Character Image'></img>
             </div>
             <div className='textArea'>
-                <h1 className="name">{character.name}</h1>
-                <p className="status">{character.status}</p>
+                <h1 className="name">Name: {character.name}</h1>
+                <p className="status">Status: {character.status}</p>
             </div>
         </div>
-    <div className ='prev' onClick={pageDown}>prev</div>
+    <div className ='prev' onClick={pageDown}>◀︎</div>
   </div>)
 } 
 export default Slider

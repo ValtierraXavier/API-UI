@@ -7,7 +7,9 @@
 
 .navbar{
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   border-color: #000000;
   background-color: lightgrey;
   height: 40px;
@@ -27,15 +29,23 @@
   align-self: center;
   padding-top: 10px;
   margin-top: 50px;
+  border-width: 20px;
+  border: solid;
+  border-radius: 15px;
+  padding: 30px;
+  background-color: black;
 }
 
 .prev{
-  display:flex;
+  display:flex; 
   align-items: center;
   justify-content: center;
   order:1;
-  background-color:red;
+  background-color:grey;
   flex-grow: 1;
+  margin: 2px;
+  border-radius: 5px;
+  min-width: 40px;
 }
 
 .display{
@@ -48,26 +58,38 @@
   order: 2;
   background-color: grey;
   flex-grow: 5;
+  margin: 5px;
+  border-radius: 5px;
 }
 
 .image{
   order:1;
   min-height:auto;
-  min-width:auto;
+  min-width:405px;
   background-color: bisque;
   justify-self: center;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.textArea{
+  order:2;
+  border-width: 5px;
+  border: solid lightgray;
+  border-radius: 5px;
+  padding: 10px;
 }
 
 .name{
   order: 2;
-  justify-self: flex-start;
-  background-color: lightgreen;
-  min-height: 20px;
-  min-width: 40px;
+  min-height: auto;
+  min-width: auto;
 }
 
 .status{
   order: 3;
+  min-height: auto;
+  min-width: auto;
 }
 
 .next{
@@ -75,8 +97,13 @@
   align-items: center;
   justify-content: center;
   order:3;
-  background-color: green;
+  background-color: grey;
   flex-grow: 1;
+  margin: 2px;
+  border-radius: 5px;
+  min-width: 40px;
 }
+
+
 
 
