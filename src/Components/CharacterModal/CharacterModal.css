@@ -1,0 +1,31 @@
+.characterModal{
+    display: flex;
+    position: inline;
+    /* visibility: hidden; */
+    background-color: rgba(50,50,50,.9);
+    height: 0vh;
+    width: 0vw;
+    justify-content: center;
+    align-items: center;
+    /* color: white; */
+    /* margin: 10vh 35vw; */
+    border: double lightgray;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 10px;
+    color:rgba(245, 245, 245, 0);
+    opacity: 0;
+    transition: .2s color ease-in-out .5s, .2s height ease-in-out .2s, .2s width ease-in-out, .2s opacity ease;
+}
+
+.mapDiv{
+    overflow-y: auto;
+    height: 34vh;
+}
+
+.residentName{
+    position: relative;
+    display: flex;
+    overflow-y: auto;
+}
+
