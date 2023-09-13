@@ -132,13 +132,28 @@
     overflow-y: auto;
     font-size: 1.5rem;
   }
+  .characterLocation{
+    /* border: solid white; */
+    margin: 0;
+  }
 
-  .characterTextArea:hover .characterModal{
+  .characterOrigin{
+    margin-top: 1.5vh;
+  }
+
+  .characterLocation:hover{
+    color: white;
+    transition: .2s;
+  }
+
+  .characterLocation:hover > .residents > .characterModal{
+    position: inline;
     height: 35vh;
     width: 32vw;
     visibility: visible;
     opacity: 1;
-    color:rgba(245, 245, 245, 1);
+    color:rgba(255, 255, 255, 1);
+    z-index: 0;
   }
   
   .name{

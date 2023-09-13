@@ -30,9 +30,9 @@ return (
                     <h3 className="characterStatus">Status: {character?character.status:''}</h3>
                     <h3 className="characterGender">Gender: {character?character.gender:''}</h3>
                     <h3  data-type = 'location' className="characterLocation" id='chatacterLocation'>Location: {character.location?character.location.name:'N/A'}
-                        <div className='residents'>Residents:{
+                        <div className='residents'>Residents: 
                             <CharacterModal character={character} location={location} residents={residents}/>
-                        }</div>
+                        </div>
                     </h3>
                     <h3  data-type = 'origin' className="characterOrigin" id='characterOrigin' >Origin: {character.origin?character.origin.name:'N/A'}</h3>
                     <h3 className="characterSpecies">Species: {character?character.species:''}</h3>

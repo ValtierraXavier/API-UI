@@ -69,7 +69,6 @@ useEffect(()=>{
   return (
   <section className='whole'>
     <Navbar/>
-    {/* <CharacterModal character={character} location={location} residents={residents} /> */}
     <Slider character={character} location={location} residents={residents} setCharacter={setCharacter} pageNumber={pageNumber} setPageNumber={setPageNumber} />
   </section>
   )
