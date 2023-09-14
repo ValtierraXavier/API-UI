@@ -1,11 +1,10 @@
 .characterModal{
     display: flex;
+    flex-flow:column nowrap;
     position: inline;
     background-color: rgba(50,50,50,.9);
     height: 0vh;
     width: 0vw;
-    justify-content: center;
-    align-items: center;
     border-radius: 10px;
     box-sizing: border-box;
     padding: 10px;
@@ -14,15 +13,14 @@
     z-index: 100;
     transition: .2s color ease-in-out .5s, .2s height ease-in-out .4s, .2s width ease-in-out .2s, .2s opacity ease .2s, .2s border ease;
     margin: 0;
-
 }
 
 .mapDiv{
     overflow-y: auto;
     height: 35vh;
-    width:32vw;
-    
+    width:30.5vw;
     box-sizing: border-box;
+    border-top: solid white 1px;
 }
 
 .residentName{
@@ -30,3 +28,6 @@
     display: flex;
 }
 
+.residentName{
+    font-size: 1rem;
+}

@@ -10,11 +10,11 @@ function App() {
   const [character, setCharacter] = useState({})
   const [pageNumber, setPageNumber] = useState(1)
   const [modalType, setmodalType] = useState('')
-  const [location, setLocation] = useState(null)
+  const [location, setLocation] = useState([])
   const [origin, setOrigin] = useState({})
   const [residentsURLArr, setResidentsURLArr]=useState('')
   let residentsIdArr=[]
-  let [residents, setResidents] =useState(null)
+  let [residents, setResidents] =useState()
   const infoModal = document.getElementById('characterModal')
 
   
@@ -41,7 +41,6 @@ function App() {
             arr.push(resident.split('/')[5])
             })
             setResidents(prev => prev = arr.toString())
-            // console.log(residents)
            }
         }
       }else{
@@ -51,7 +50,6 @@ function App() {
   }
   }
 
-  // console.log(residents)
 
 function limiter(){
   if(pageNumber<1){

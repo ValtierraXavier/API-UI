@@ -2,14 +2,11 @@
     display: flex;
     flex-direction: row;
     height: 80vh;
-    width: auto;
-    justify-self: center;
-    align-self: center;
     padding-top: 10px;
     margin-top: 20px;
     border-radius: 15px;
     padding: 30px;
-    background-color: rgba(50, 50, 50, .4);
+    background-color: rgba(50, 50, 50, .8);
     overflow-y: auto;
   }
   
@@ -91,6 +88,7 @@
     background-color: white;
     color:black;
     border: solid grey;
+    color: red;
   }
   
   
@@ -145,6 +143,8 @@
     color: white;
     transition: .2s;
   }
+
+  
 
   .characterLocation:hover > .residents > .characterModal{
     position: inline;
