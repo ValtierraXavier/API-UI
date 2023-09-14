@@ -17,8 +17,6 @@
 
 .mapDiv{
     overflow-y: auto;
-    height: 35vh;
-    width:30.5vw;
     box-sizing: border-box;
     border-top: solid white 1px;
 }

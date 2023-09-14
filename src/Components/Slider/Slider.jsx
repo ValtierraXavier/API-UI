@@ -14,9 +14,9 @@ return (
     <div className ='infoWindow'>  
         
         <div className="forwardButtons">
-            <button  className ='next' onClick={pageUp}>▶︎</button>
-            <button  className ='fiftyUp' onClick={fiftyUp}>▷▶</button>
-            <button  className ='end' onClick={end}>⇥</button>
+            <button className='forwardButton' id ='next' onClick={pageUp}>▶︎</button>
+            <button className='forwardButton' id ='fiftyUp' onClick={fiftyUp}>▷▶</button>
+            <button className='forwardButton' id ='end' onClick={end}>⇥</button>
         </div>
 
         <div className = 'display' id = 'display'>
@@ -37,7 +37,7 @@ return (
                             <CharacterModal character={character} location={location} residents={residents}/>
                         </div>
                     </h4>
-                    <h4  data-type = 'origin' className="characterOrigin" id='characterOrigin' >Origin: {character.origin?character.origin.name:'N/A'}</h4>
+                    <h4  data-type = 'origin' className="characterOrigin" id='characterOrigin'>Origin: {character.origin?character.origin.name:'N/A'}</h4>
                     <h4 className="characterSpecies">Species: {character?character.species:''}</h4>
                     <h4 className="characteroutOf">Character: {character?character.id:''} of 826</h4>
                 </div>
@@ -45,9 +45,9 @@ return (
         </div>
 
     <div className='backButtons'>
-        <button className ='prev' onClick={pageDown}>◀︎</button>
-        <button className ='fiftyDown' onClick={fiftyDown}>◀︎◁</button>
-        <button className ='start' onClick={begining}>⇤</button>
+        <button className='backButton' id ='prev' onClick={pageDown}>◀︎</button>
+        <button className='backButton' id ='fiftyDown' onClick={fiftyDown}>◀︎◁</button>
+        <button className='backButton' id ='start' onClick={begining}>⇤</button>
     </div>
 
   </div> 
